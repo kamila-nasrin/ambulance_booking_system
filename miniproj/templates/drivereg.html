@@ -1,0 +1,62 @@
+<!--drivereg.html-->
+{% extends 'base.html' %} {% load crispy_forms_tags %} {% load static %} {% block title %} About {% endblock %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+</head>
+
+<body>
+
+    <hr>
+    <h3 class="text-center">
+        <font color=red>Driver Registration Form </font>
+    </h3>
+    <hr>
+    <main class="main-container">
+        <form id="locationForm" class='container' action="{% url 'driv_prof' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="container w-50">
+                <div class="row">
+                    <div class="col-md-12">{{form|crispy}}
+                        <br>
+                        <button type="submit" class="btn btn-secondary btn-sm">Save</button>
+                        <hr>
+                    </div>
+                    <div id="location-status">Getting location...</div>
+                    <div id="user-location"></div>
+
+                    <script>
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(function(position) {
+                                var latitude = position.coords.latitude;
+                                var longitude = position.coords.longitude;
+
+                                // Display the location on the HTML page
+                                var locationStatus = document.getElementById('location-status');
+                                locationStatus.innerText = 'Location updated successfully!';
+
+                                var userLocation = document.getElementById('user-location');
+                                userLocation.innerText = 'Your current location is: ' + latitude + ', ' + longitude;
+                            });
+                        } else {
+                            console.log("Geolocation is not supported by this browser.");
+                            var locationStatus = document.getElementById('location-status');
+                            locationStatus.innerText = 'Geolocation is not supported.';
+                        }
+                    </script>
+                    <hr>
+
+                </div>
+            </div>
+        </form>
+
+    </main>
+</body>
+
+</html>
+{% endblock %}

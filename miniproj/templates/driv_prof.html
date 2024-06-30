@@ -1,0 +1,67 @@
+{% extends 'base_prof.html' %} {% load static %} {% block title %} About {% endblock %} {% block content %}
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static '/css/driv_prof.css' %}">
+
+    <title>Drivers profile</title>
+</head>
+
+<body>
+
+    {% if messages %}
+    <div class="notification-container">
+        <div class="notification">
+            {% for msg in messages %}
+            <p {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{msg}}</p>
+            {% endfor %}
+            <img id='cross' src="{% static '/images/close.png' %}" width="15px" height="15px" alt="">
+        </div>
+    </div>
+    <script>
+        var cross = document.getElementById('cross')
+        cross.addEventListener('click', () => {
+            document.getElementsByClassName('notification-container')[0].style.display = 'none';
+        })
+    </script>
+    {% endif %}
+    <main class="main-container">
+        <div class="container">
+            <div class="profile-photo-container">
+                <img src="{{user.driv_prof.ambulance_image.url}}" alt="User Image" width="100px" srcset="">
+            </div>
+
+
+            <div class="user-content-container">
+                <p class="username">Name: {{user.driv_prof.first_name}} {{user.driv_prof.last_name}}</p>
+                <p class="user-desc">Description: {{user.driv_prof.description}}</p>
+                <p class="user-phn1">Phone Number: {{user.driv_prof.phone_num}}</p>
+                <p class="user-phn2">Alternate phone number: {{user.driv_prof.alternate_phone_number}}</p>
+                <p class="user-email">email: {{user.driv_prof.email}}</p>
+                <p class="user-place">Place: {{user.driv_prof.place}}</p>
+                <p class="user-type">Ambulance type: {{user.driv_prof.amb_type}}</p>
+                <p class="user-status">Ambulance status: {{user.driv_prof.amb_status}}</p>
+                <hr>
+                <div class="profile-edit-link-container">
+                    <a href="{% url 'drivereg' %}">Edit</a>
+                </div>
+                <div class="profile-icon-link-container">
+                    <a href="{% url 'login' %}">Logout</a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
+{% endblock %}

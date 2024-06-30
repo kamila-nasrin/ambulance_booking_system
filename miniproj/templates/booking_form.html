@@ -1,0 +1,63 @@
+{% extends 'base.html' %} {% load crispy_forms_tags %} {% load static %} {% block title %} About {% endblock %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get User Location</title>
+</head>
+
+<body>
+    <hr>
+    <font color="red">
+        <h4 class="text-center">Enter your details to get the details of ambulances near you</h4>
+    </font>
+    <!-- ... your existing HTML code ... -->
+
+    <form method="post" action="">
+        <main class=" main-container">
+            <div class=" container w-50">
+                <div class="row">
+                    <div class="col-md-12">
+                        {% csrf_token %} {{form|crispy}}
+                        <br>
+                        <!-- Add these hidden fields to your form -->
+                        <input type="hidden" id="id_latitude" name="latitude">
+                        <input type="hidden" id="id_longitude" name="longitude">
+                        <p>Make sure that you are connected to the internet</p>
+                        <button type="submit " class="btn btn-secondary btn-sm " onclick="getLocation()">Save</button>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </form>
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(sendLocation);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function sendLocation(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            
+            // Set the latitude and longitude values in the hidden form fields
+            document.getElementById('id_latitude').value = latitude;
+            document.getElementById('id_longitude').value = longitude;
+
+            // Submit the form
+            document.getElementById('booking_form').submit();
+        }
+
+        // Call getLocation() when the page loads
+        window.onload = function() {
+            getLocation();
+        };
+    </script>
+</body>
+</html>
+{% endblock %}

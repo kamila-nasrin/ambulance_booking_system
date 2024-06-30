@@ -1,0 +1,68 @@
+<!-- {% extends 'base.html' %} {% load crispy_forms_tags %} {% load static %} {% block title %} About {% endblock %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an ambulance</title>
+</head>
+
+<body>
+    <hr>
+    <font color="red">
+        <h4 class="text-center">Book your Ambulance</h4>
+    </font>
+    
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(sendLocation);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function sendLocation(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            print(latitude);
+            // Set the latitude and longitude values in the hidden form fields
+            document.getElementById('id_latitude').value = latitude;
+            document.getElementById('id_longitude').value = longitude;
+
+            // Submit the form
+            document.getElementById('booking-form').submit();
+        }
+
+        // Call getLocation() when the page loads
+        window.onload = function() {
+            getLocation();
+        };
+    </script> 
+
+
+<form method="post" action="">
+    <main class=" main-container ">
+        <div class=" container w-50 ">
+            <div class="row ">
+                <div class="col-md-12 ">
+                    {% csrf_token %} {{form|crispy}}
+                    <br>
+                   
+<input type="hidden" id="id_latitude" name="latitude">
+<input type="hidden" id="id_longitude" name="longitude">
+
+<button type="submit " class="btn btn-secondary btn-sm ">Save</button>
+<hr>
+</div>
+</div>
+</div>
+</main>
+</form>
+
+
+</body>
+
+</html>
+{% endblock %} -->

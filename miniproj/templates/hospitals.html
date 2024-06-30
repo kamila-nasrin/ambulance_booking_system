@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block title %} {% endblock %} {% block content %}
+<h1 class="text-center">Hospital Details</h1>
+<hr> {% for h in hosp %}
+<div class="mx-auto w-50 bg-danger text-center text-white p-3 my-3 border-warning rounded">
+    <h2>{{h.hos_name}}</h2>
+    <h4>Contact number : {{h.contact_info}}</h4>
+    <p>Place : {{h.location}}</p>
+    <p>website : {{h.hos_site}}</p>
+</div>
+{% endfor %} </hr>
+{% endblock %}

@@ -1,0 +1,581 @@
+{% extends 'base2.html' %} {% load static %} {% block title %} {% endblock %} {% block content %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title> AMBIGO </title>
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!--owl slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <!-- font awesome style -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="{% static '/css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static '/css/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{% static '/css/responsive.css'%}">
+    <link rel="stylesheet" href="{% static '/css/style.css.map'%}">
+    <link rel="stylesheet" href="{% static '/css/style.scss' %}">
+    <link rel="stylesheet" href="{% static '/css/style2.css'%}">
+
+
+</head>
+
+<body>
+
+    <div class="hero_area">
+
+        <div class="hero_bg_box">
+            <div class="bg_img_box">
+                <img src="{% static '/images/pic.jpg' %}" alt="">
+            </div>
+        </div>
+        <!-- slider section -->
+        <section class="slider_section ">
+            <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container ">
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <div class="detail-box">
+                                        <h1>
+                                            RAPID RELIEF<br> RELIABLE CARE
+                                        </h1>
+                                        <p>
+                                            AMBIGO is an Ambulance Booking System designed to provide swift and reliable medical transport services with real time tracking, we ensure timely response and efficient coordination.
+                                        </p>
+                                        <div class="btn-box">
+                                            <a href="{% url 'booking_form' %}" class="btn1">
+                        Call Now
+                      </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="img-box">
+                                        <img src="{% static '/images/ambu.png' %}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <!-- service section -->
+    <section class="service_section layout_padding">
+        <div id="services">
+            <div class="service_container">
+                <div class="container ">
+                    <div class="heading_container heading_center">
+                        <h1>
+                            &emsp;
+                        </h1>
+                        <h2>
+                            Our <span>Services</span>
+                        </h2>
+                        <p>
+                            This is designed in favor of ambulance booking which helps you to book the ambulance in advance. it helps from the manual work from which it is very difficult to find the ambulance because of waiting time , lack of infrastructure and lack of response
+                            from the local hospitals.
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 ">
+                            <div class="box ">
+                                <div class="img-box">
+                                    <img src="{% static '/images/usr.jpg'%}" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h5>
+                                        User
+                                    </h5>
+                                    <p>
+                                        fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using
+                                    </p>
+                                    <a href="{% url 'booking_form' %}">Get your nearest ambulance details
+                 
+                </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 ">
+                            <div class="box ">
+                                <div class="img-box">
+                                    <img src="{% static '/images/driver.png' %}" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h5>
+                                        Driver
+                                    </h5>
+                                    <p>
+                                        fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using
+                                    </p>
+                                    <a href="{% url 'signup' %}">Sign In</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 ">
+                            <div class="box ">
+                                <div class="img-box">
+                                    <img src="{% static '/images/hosp.png' %}" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h5>
+                                        Hospitals
+                                    </h5>
+                                    <p>
+                                        fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using
+                                    </p>
+                                    <a href="{% url 'hospitals' %}">
+                  View
+                </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- end service section -->
+
+
+    <!-- about section -->
+
+    <section class="about_section layout_padding">
+        <div class="container  ">
+            <div id="about">
+                <div class=" heading_container heading_center ">
+                    <h2>
+                        About <span>Us</span>
+                    </h2>
+                    <p>
+                        Managing ambulance services in an organized manner using AMBIGO
+                    </p>
+                </div>
+                <div class="row ">
+                    <div class="col-md-6 ">
+                        <div class="img-box ">
+                            <img src="{% static '/images/ambu2.jpg' %} " alt=" ">
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="detail-box ">
+                            <h3>
+                                AMBIGO
+                            </h3>
+                            <p>
+                                “AMBIGO” is a website developed for managing ambulance services. This is a much needed website as we have seen many casualities caused due to the lack of services provided by the hospitals or the ambulance being not able to reach at time to the patient.The
+                                project deals with the problems on managing ambulance services and avoids the problems which occur when carried manually.
+
+                            </p>
+                            <p>This website can be used for booking the ambulance in an organized manner . Using this system, it is easy to book the ambulance.This platform provides the facility for upgrading and digitalizing the traditional channels that
+                                were used to seek help . All the details are managed online, very easily and can be accessed without any problem from anywhere anytime through internet. It provides high security to the information stored in the database
+                                to access.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end about section -->
+
+    <!-- why section -->
+
+    <section class="why_section layout_padding ">
+        <div class="container ">
+            <div class="heading_container heading_center ">
+                <h2>
+                    Why Choose <span>Us</span>
+                </h2>
+            </div>
+            <div class="why_container">
+                <div class="box">
+                    <div class="img-box">
+                        <img src="{% static '/images/w1.png' %}" class="img1" alt=" ">
+                    </div>
+                    <div class="detail-box ">
+                        <h5>
+                            Accessibility
+                        </h5>
+                        <p>
+                            We provide a convenient way to request an ambulance from anywhere, at any time, using a smartphone or computer.
+                        </p>
+                    </div>
+                </div>
+                <div class="box ">
+                    <div class="img-box ">
+                        <img src="{% static '/images/w2.png' %} " alt=" ">
+                    </div>
+                    <div class="detail-box ">
+                        <h5>
+                            Speed
+                        </h5>
+                        <p>
+                            Online booking can be faster than traditional phone calls, reducing response times during emergencies.
+                        </p>
+                    </div>
+                </div>
+                <div class="box ">
+                    <div class="img-box ">
+                        <img src="{% static '/images/w3.jpg' %} " alt=" ">
+                    </div>
+                    <div class="detail-box ">
+                        <h5>
+                            GPS Integration
+                        </h5>
+                        <p>
+                            GPS features helps to track the ambulance's location in real-time, allowing you to know when it will arrive.
+                        </p>
+                    </div>
+                </div>
+                <div class="box ">
+                    <div class="img-box ">
+                        <img src="{% static '/images/wc4.jpg' %} " alt=" ">
+                    </div>
+                    <div class="detail-box ">
+                        <h5>
+                            Information Accuracy
+                        </h5>
+                        <p>
+                            We can collect vital information about the patient and location, reducing errors in communication.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-box ">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- end why section -->
+
+    <!-- team section -->
+    <section class="team_section layout_padding ">
+        <div id="contact_us ">
+            <div class="container-fluid ">
+                <div class="heading_container heading_center ">
+                    <h2 class=" ">
+                        Contact <span> Us</span>
+                    </h2>
+                </div>
+                <div class="container ">
+                    <div class="row row-cols-3 ">
+                        <div class="col ">
+                            <div class="team_container ">
+                                <div class="box ">
+                                    <div class="img-box ">
+                                        <img src="{% static 'images/w1.png' %} " class="img">
+                                    </div>
+                                    <div class="detail-box ">
+                                        <h5>
+                                            Anushree E
+                                        </h5>
+                                        <p>
+                                            CCSIT, Calicut University Campus
+                                        </p>
+                                    </div>
+                                    <div class="social_box ">
+                                        <a href="# ">
+                                            <i class="fa fa-facebook " aria-hidden="true "></i>
+                                        </a>
+                                        <a href="# ">
+                                            <i class="fa fa-twitter " aria-hidden="true "></i>
+                                        </a>
+                                        <a href="# ">
+                                            <i class="fa fa-linkedin " aria-hidden="true "></i>
+                                        </a>
+                                        <a href="# ">
+                                            <i class="fa fa-instagram " aria-hidden="true "></i>
+                                        </a>
+                                        <a href="# ">
+                                            <i class="fa fa-youtube-play " aria-hidden="true "></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col ">
+                            <div class="team_container ">
+                                <div class="box ">
+                                    <div class="img-box ">
+                                        <img src="{% static 'images/w1.png' %} " class="img1 " alt=" ">
+                                    </div>
+                                    <div class="detail-box ">
+                                        <h5>
+                                            Athulya A K
+                                        </h5>
+                                        <p>
+                                            CCSIT, Calicut University Campus
+                                        </p>
+                                    </div>
+                                    <div class="social_box ">
+                                        <a href="# ">
+                                            <i class="fa fa-facebook " aria-hidden="true "></i>
+                                        </a>
+                                        <a href="# ">
+                                            <i class="fa fa-twitter " aria-hidden="true "></i>
+                                        </a>
+                                        <a href="# ">
+                                            <i class="fa fa-linkedin " aria-hidden="true "></i>
+                                        </a>
+                                        <a href="# ">
+                                            <i class="fa fa-instagram " aria-hidden="true "></i>
+                                        </a>
+                                        <a href="# ">
+                                            <i class="fa fa-youtube-play " aria-hidden="true "></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col ">
+                            <div class="team_container ">
+                                <div class="box ">
+                                    <div class="img-box ">
+                                        <img src="{% static 'images/w1.png' %} " class="img1 " alt=" ">
+                                    </div>
+                                    <div class="detail-box ">
+                                        <h5>
+                                            Kamila Nasrin M P
+                                        </h5>
+                                        <p>
+                                            CCSIT, Calicut University Campus
+                                        </p>
+                                    </div>
+                                    <div class="social_box ">
+                                        <a href="# ">
+                                            <i class="fa fa-facebook " aria-hidden="true "></i>
+                                        </a>
+                                        <a href="# ">
+                                            <i class="fa fa-twitter " aria-hidden="true "></i>
+                                        </a>
+                                        <a href="# ">
+                                            <i class="fa fa-linkedin " aria-hidden="true "></i>
+                                        </a>
+                                        <a href="# ">
+                                            <i class="fa fa-instagram " aria-hidden="true "></i>
+                                        </a>
+                                        <a href="# ">
+                                            <i class="fa fa-youtube-play " aria-hidden="true "></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col ">
+                            <div class="team_container ">
+                                <div class="box ">
+                                    <div class="img-box ">
+                                        <img src="{% static 'images/w1.png' %} " class="img1 " alt=" ">
+                                    </div>
+                                    <div class="detail-box ">
+                                        <h5>
+                                            Shabna Fathima M P
+                                        </h5>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="social_box ">
+                                        <a href="# ">
+                                            <i class="fa fa-facebook " aria-hidden="true "></i>
+                                        </a>
+                                        <a href="# ">
+                                            <i class="fa fa-twitter " aria-hidden="true "></i>
+                                        </a>
+                                        <a href="# ">
+                                            <i class="fa fa-linkedin " aria-hidden="true "></i>
+                                        </a>
+                                        <a href="# ">
+                                            <i class="fa fa-instagram " aria-hidden="true "></i>
+                                        </a>
+                                        <a href="# ">
+                                            <i class="fa fa-youtube-play " aria-hidden="true "></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col ">
+                            <div class="team_container ">
+                                <div class="box ">
+                                    <div class="img-box ">
+                                        <img src="{% static 'images/w1.png' %} " class="img1 " alt=" ">
+                                    </div>
+                                    <div class="detail-box ">
+                                        <h5>
+                                            Shadiya C V
+                                        </h5>
+                                        <p>
+                                            CCSIT, Calicut University Campus
+                                        </p>
+                                    </div>
+
+                                    <div class="social_box ">
+                                        <a href="# ">
+                                            <i class="fa fa-facebook " aria-hidden="true "></i>
+                                        </a>
+                                        <a href="# ">
+                                            <i class="fa fa-twitter " aria-hidden="true "></i>
+                                        </a>
+                                        <a href="# ">
+                                            <i class="fa fa-linkedin " aria-hidden="true "></i>
+                                        </a>
+                                        <a href="# ">
+                                            <i class="fa fa-instagram " aria-hidden="true "></i>
+                                        </a>
+                                        <a href="# ">
+                                            <i class="fa fa-youtube-play " aria-hidden="true "></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- end team section -->
+
+
+    <!-- info section -->
+
+    <section class="info_section layout_padding2 ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-6 col-lg-3 info_col ">
+                    <div class="info_contact ">
+                        <h4>
+                            Address
+                        </h4>
+                        <div class="contact_link_box ">
+                            <a href=" ">
+                                <i class="fa fa-map-marker " aria-hidden="true "></i>
+                                <span>
+                  Location
+                </span>
+                            </a>
+                            <a href=" ">
+                                <i class="fa fa-phone " aria-hidden="true "></i>
+                                <span>
+                  Call +01 1234567890
+                </span>
+                            </a>
+                            <a href=" ">
+                                <i class="fa fa-envelope " aria-hidden="true "></i>
+                                <span>
+                  demo@gmail.com
+                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="info_social ">
+                        <a href=" ">
+                            <i class="fa fa-facebook " aria-hidden="true "></i>
+                        </a>
+                        <a href=" ">
+                            <i class="fa fa-twitter " aria-hidden="true "></i>
+                        </a>
+                        <a href=" ">
+                            <i class="fa fa-linkedin " aria-hidden="true "></i>
+                        </a>
+                        <a href=" ">
+                            <i class="fa fa-instagram " aria-hidden="true "></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 info_col ">
+                    <div class="info_detail ">
+                        <h4>
+                            Info
+                        </h4>
+                        <p>
+                            necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2 mx-auto info_col ">
+                    <div class="info_link_box ">
+                        <h4>
+                            Links
+                        </h4>
+                        <div class="info_links ">
+                            <a class="active " href="{% url 'index' %} ">
+                Home
+              </a>
+                            <a class=" " href="#about ">
+                About
+              </a>
+                            <a class=" " href="#services ">
+                Services
+              </a>
+                            <a class=" " href="{% url 'booking_form' %} ">
+                Booking
+              </a>
+                            <a class=" " href="#contact_us ">
+                Contact
+              </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end info section -->
+
+    <!-- footer section -->
+    <section class="footer_section ">
+        <div class="container ">
+            <p>
+
+            </p>
+        </div>
+    </section>
+    <!-- footer section -->
+
+    <!-- jQery -->
+    <script type="text/javascript " src="js/jquery-3.4.1.min.js "></script>
+    <!-- popper js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous ">
+    </script>
+    <!-- bootstrap js -->
+    <script type="text/javascript " src="js/bootstrap.js "></script>
+    <!-- owl slider -->
+    <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js ">
+    </script>
+    <!-- custom js -->
+    <script type="text/javascript " src="js/custom.js "></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap ">
+    </script>
+    <!-- End Google Map -->
+
+</body>
+
+</html>
+{% endblock %}

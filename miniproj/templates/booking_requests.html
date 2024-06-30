@@ -1,0 +1,59 @@
+<!-- {% extends 'base.html' %}{% load static %} {% block title %} booking {% endblock %} {% block content %}
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static '/css/driers.css' %}">
+
+<title>Request List</title>
+</head>
+
+<body>
+
+    {% if messages %}
+    <div class="notification-container">
+        <div class="notification">
+            {% for msg in messages %}
+            <p {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{msg}}</p>
+            {% endfor %}
+            <img id='cross' src="{% static '/images/close.png' %}" width="15px" height="15px" alt="">
+        </div>
+    </div>
+    <script>
+        var cross = document.getElementById('cross')
+        cross.addEventListener('click', () => {
+            document.getElementsByClassName('notification-container')[0].style.display = 'none';
+        })
+    </script>
+    {% endif %}
+    <main class="main-container">
+        <div class="container">
+            <div class="user-content-container">{% for b in reqs %}
+                <hr>
+                <div class="row">
+                    {% if b.Driver_name==user.driv_prof.first_name %}
+                    <div class="col ">
+                        <p class="username ">{{b.Name}}</p>
+                        <p class="user-phn1 ">Phone Number: {{b.Phone_number}}</p>
+                        <p class="user-place ">Place: {{b.Place}}</p>
+                        <p class="user-email ">email: {{b.email}}</p>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-danger btn-sm" onclick="makeCall(b.Phone_number)">Call Now</button>
+                    </div>
+                    {% endif %}
+                    <hr>{% endfor %}
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
+{% endblock %} -->
